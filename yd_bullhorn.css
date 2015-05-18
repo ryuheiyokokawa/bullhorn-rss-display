@@ -1,0 +1,32 @@
+.bullhorn-rss-item {
+	position: relative;
+	float: left;
+	display:block;
+	width: 100%;
+	padding: 10px 5px 30px 5px;
+	border-bottom: 1px solid #000;
+}
+
+.bullhorn-rss-item a {
+
+}
+
+.bullhorn-rss-item a h2 {
+	margin: 10px 0;
+	font-size: 20px;
+}
+
+.bullhorn-rss-item date {
+
+}
+
+/*Below is the content box which contains everything below the date*/
+.bullhorn-rss-item .content {
+
+}
+
+/*NOTE: Below is the Details/Apply Buttons */
+.bullhorn-rss-item .content a {
+	width: 30%;
+	display: inline-block;
+}

@@ -20,8 +20,7 @@ function register_bhrss_settings() {
 	register_setting( 'bhrss-settings-group', 'bh_cache' );
 }
 
-function bhrss_settings_page() {
-	//yup, classc WP stuff. ?>
+function bhrss_settings_page() { //yup, classc WP stuff. ?>
 
 	<div class="wrap">
 	<h2>Bullhorn RSS Feed Puller</h2>

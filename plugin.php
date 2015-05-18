@@ -16,19 +16,21 @@ if(!function_exists('yd_bullhorn')) {
 
 	function yd_bullhorn() {
 		$view = '';
-		$objects = get_transient('yd_bullhorn_cache');
+
+		if( get_option( 'bh_load_styling' ) ) {
+			wp_register_style( 'yd_bullhorn', plugins_url('yd_bullhorn.css', __FILE__) );
+			wp_enqueue_style( 'yd_bullhorn' );
+		}
 		
-		if( get_option('bh_cache') && $objects !== false ) {
-			//if the cache exists and it isn't expired (10 minutes or 6000 seconds)
-			//objects is set above, note in PHP a single equal sign sets a variable in an if statement.
-			
-		} else {
+		$objects = get_transient( 'yd_bullhorn_cache' );//see if this object exists as a transient.
+		
+		if( !get_option( 'bh_cache' ) || !$objects ) {
 			$objects = yd_bullhorn_get();//grab the RSS.
 			$objects = json_encode($objects);//back to array;
-			if(get_option('bh_cache')) {//if the system is set to do a cache, set it.
-				set_transient('yd_bullhorn_cache',$objects, 600);//600 seconds = 10 minutes
+			if( get_option( 'bh_cache' ) ) {//if the system is set to do a cache, set it.
+				set_transient( 'yd_bullhorn_cache', $objects, 600 );//600 seconds = 10 minutes
 			} else {
-				delete_transient( 'yd_bullhorn_cache');
+				delete_transient( 'yd_bullhorn_cache' );
 			}
 		}
 
@@ -37,12 +39,14 @@ if(!function_exists('yd_bullhorn')) {
 		if(is_array($objects) && count( $objects['channel']['item'] )) {
 			//Definitely not my idea of awesome code, but it works.
 			foreach($objects['channel']['item'] as $object) {
+				//date_default_timezone_get();
+				$cur_date = date("m-d-Y", strtotime($object['pubDate']));
 				$view .='
-				<div class="item">
+				<div class="bullhorn-rss-item">
 				        <a href="'.$object['link'].'">
 				                <h2>'.$object['title'].'</h2>
 				        </a>
-				        <date>'.$object['pubDate'].'</date>
+				        <date>'.$cur_date.'</date>
 				        <div class="content">'.$object['description'].'</div>
 				</div>';
 			}
