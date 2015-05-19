@@ -13,7 +13,10 @@ Put in the RSS link in the configs, it'll list the jobs for you.  This works pre
 == Description ==
 
 Plugin pulls any rss feed and displays relevant information on the page.
-
+The url/feed you're looking for might look something like below:
+```
+http://XXXX.bullhornstaffing.com/JobBoard/Standard/JobOpportunitiesRSS.cfm?privateLabelID=XXXXX
+```
 
 == Installation ==
 

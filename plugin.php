@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bullhorn RSS display
 Plugin URI: http://y-designs.com/
-Description: A simple wordpress plugin that pulls from the bullhorn RSS
+Description: A simple wordpress plugin that pulls from a Bullhorn Jobs RSS
 Version: 0.1
 Author: Ryuhei Yokokawa
 Author URI: http://y-designs.com
