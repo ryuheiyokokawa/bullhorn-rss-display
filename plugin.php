@@ -21,6 +21,10 @@ if(!function_exists('yd_bullhorn')) {
 				'url' => get_option('bh_rss_url')
 			), $atts);
 
+		if(!strlen($attr['url'])) {
+			return 'Please fill in the RSS URL.';
+		}
+
 		$unique = md5($attr['url']);//makes transient unique but persistent
 
 		$view = '';//init the view to be sent back. Super primitive stuff!
