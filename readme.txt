@@ -1,4 +1,5 @@
 === Plugin Name ===
+
 Contributors: ryuheixys
 Donate link: http://y-designs.com
 Tags: bullhorn,rss,recuriting,jobs
@@ -31,10 +32,10 @@ Built by [Y-Designs | Seattle Web Design](http://y-designs.com/)
 
 Install the plugin as you would with any WordPress plugin in your wp-content/plugins/ directory or equivalent.
 Then:
-1. Activate the plugin through the 'Plugins' menu in WordPress.
-1. A new settings sould appear after activation.  It should be called "BHRSS Settings".  Click on it.
-1. Put in your configs there (Bullhorn RSS url which you can grab from any jobs listing page on BH)
-1. Put the [bullhorn_rss] shortcode where you want your RSS content to display.
+ 1. Activate the plugin through the 'Plugins' menu in WordPress.
+ 1. A new settings sould appear after activation.  It should be called "BHRSS Settings".  Click on it.
+ 1. Put in your configs there (Bullhorn RSS url which you can grab from any jobs listing page on BH)
+ 1. Put the [bullhorn_rss] shortcode where you want your RSS content to display.
 
 
 == Frequently Asked Questions ==
