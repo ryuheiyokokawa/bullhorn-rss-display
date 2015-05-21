@@ -15,13 +15,15 @@ Put in the Bullhorn RSS link in the configs, it'll list Bullhorn jobs for you.
 Plugin pulls any RSS feed and displays relevant information on the page.  This works pretty much as a simplest implementation RSS/XML reader.  This was specifically made for Bullhorn's RSS feed and has basic styling applied.  It may be used for other RSS feeds though I built it specifically for the Bullhorn usecase(Note, only tested against that RSS feed).
 
 The url/feed you're looking for might look something like below:
-```
-http://XXXX.bullhornstaffing.com/JobBoard/Standard/JobOpportunitiesRSS.cfm?privateLabelID=XXXXX
-```
+
+`http://XXXX.bullhornstaffing.com/JobBoard/Standard/JobOpportunitiesRSS.cfm?privateLabelID=XXXXX`
+
+
 Admin Options
-* Load a generic stylesheet (100% width div, well sized fonts, etc)
-* Cache the RSS feed for 10 minutes (Faster load times.  Done using transients.)
-* Use a different URL than default for the shortcode (define by adding url attribute to the shortcode)
+
+ * Load a generic stylesheet (100% width div, well sized fonts, etc)
+ * Cache the RSS feed for 10 minutes (Faster load times.  Done using transients.)
+ * Use a different URL than default for the shortcode (define by adding url attribute to the shortcode)
 
 Built by [Y-Designs | Seattle Web Design](http://y-designs.com/)
 
@@ -39,7 +41,7 @@ Then:
 
 = Is this guaranteed to work =
 
-No. I threw it together in 2 hours.  There are no guarantees.  Plus its free!
+No. I pulled it together in a few hours.  There are no guarantees.  Plus its free!
 
 = Why don't you use the API? =
 
